@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/api/transactions/:id", "destination": "/api/transactions" },
+    { "source": "/api/transactions",     "destination": "/api/transactions" },
+    { "source": "/api/classify",         "destination": "/api/classify"     },
+    { "source": "/api/healthz",          "destination": "/api/healthz"      },
+    { "source": "/(.*)",                 "destination": "/index.html"       }
+  ],
+  "functions": {
+    "api/transactions.ts": { "memory": 256, "maxDuration": 10 },
+    "api/classify.ts":     { "memory": 256, "maxDuration": 15 }
+  }
+}
